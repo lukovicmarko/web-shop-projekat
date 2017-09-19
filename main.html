@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Web shop demo</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--Kendo UI-->
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.3.914/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.3.914/styles/kendo.material.min.css" />
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.3.914/styles/kendo.material.mobile.min.css" />
+
+    <script src="http://kendo.cdn.telerik.com/2016.3.914/js/kendo.all.min.js"></script>
+
+    <!-- Notify.js -->
+    <script src="scripts/notify.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom JavaScript -->
+
+
+
+
+    <!-- Test CSS -->
+    <style>
+
+    </style>
+
+</head>
+
+<body id="page-top" class="index" data-spy="scroll" data-target=".navbar">
+    <!--1-->
+
+    <!-- Navigacioni meni-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+
+            <!-- Ime brenda i kolapsovani meni-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+                <a class="navbar-brand" href="#">WEB SHOP DEMO</a>
+            </div>
+
+            <!-- Linkovi navigacionog menija -->
+            <div class="collapse navbar-collapse" id="main-menu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#actions">Akcije</a>
+                    </li>
+                    <li>
+                        <a href="#shop">Ponuda</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Kontakt</a>
+                    </li>
+                    <li>
+                        <a href="index.html">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+
+                    </li>
+                    <ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Profil logovanog korisnika -->
+    <header>
+        <section id="profile">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-sm-4">
+                        <img id="userImage" src="images/profile.jpg" class="img-responsive img-circle" width="250" alt="">
+                    </div>
+                    <div class="col-sm-4">
+                        <h4 id="userDisplayName">Pera Perić</h4>
+                        <p class="text-secondary" id="userTitle">zanimanje, obrazovanje</p>
+                    </div>
+                    <!-- Opste informacije o stanju narudzbine i dugme za otvaranje modalne forme za unos novog proizvoda -->
+                    <div class="col-sm-4">
+                        <button id="btnNewProduct" type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#newProduct">Dodaj nov proizvod</button>
+                        <button id="btnCart" type="button" class="btn btn-lg btn-primary"><a href="#cartSection">Korpa<i class="fa fa-shopping-cart" aria-hidden="true"></i></a></button>
+                        <p id="sumaInfo"><span>Ukupna suma:</span><span id="suma">0</span> eura.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- Akcijska ponuda proizvoda -->
+    <section id="actions">
+        <div class="container">
+            <div class="row">
+                <div id="actionsCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#actionsCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#actionsCarousel" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <div class="col-sm-4">
+                                <div class="team-member">
+                                    <img src="images/products/1.jpg" class="img-responsive img-rounded" alt="">
+                                    <h4>Proizvod 1</h4>
+                                    <p class="text-secondary">-50% do kraja oktobra</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="actions-item">
+                                    <img src="images/products/2.jpg" class="img-responsive img-rounded" alt="">
+                                    <h4>Proizvod 2</h4>
+                                    <p class="text-secondary">Najpovoljnije</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="actions-item">
+                                    <img src="images/products/3.jpg" class="img-responsive img-rounded" alt="">
+                                    <h4>Proizvod 3</h4>
+                                    <p class="text-secondary">Samo za članove</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-sm-4">
+                                <div class="actions-item">
+                                    <img src="images/products/4.jpg" class="img-responsive img-rounded" alt="">
+                                    <h4>Proizvod 4</h4>
+                                    <p class="text-secondary">Popust do 49%</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="actions-item">
+                                    <img src="images/products/5.jpg" class="img-responsive img-rounded" alt="">
+                                    <h4>Proizvod 5</h4>
+                                    <p class="text-secondary">Već od 1 dinar</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="actions-item">
+                                    <img src="images/products/6.jpg" class="img-responsive img-rounded" alt="">
+                                    <h4>Proizvod 6</h4>
+                                    <p class="text-secondary">Akcija!Akcija!</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kolekcija proizvoda -->
+    <section id="shop">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2>Katalog proizvoda</h2>
+                    <h3 class="text-secondary">Odaberite svoje omiljene proizvode!</h3>
+                </div>
+            </div>
+            <div class="row col-sm-9" id="products">
+                <!--<div class="col-sm-4 product">
+						<img src="images/products/1.jpg" class="img-responsive" alt="">
+						<h4>Proizvod 1</h4>
+						<p>Kategorija 1</p>
+						<p>Cena: <span id="cena1">45</span></p>
+						<input type="number" id="kolicina1"><br>
+						<button id="1" onclick="dodaj(this)">Dodaj</button>
+						<button id="1" onclick="izbaci(this)">Izbaci</button>
+					</div>-->
+            </div>
+            <div class="col-sm-3 searchArea">
+                <h5>Filtriranje ponude</h5>
+                <input id="searchString" type="text" class="form-control" placeholder="Search">
+                <select id="searchCategory" class="form-control">
+						<option value="all">Sve kategorije</option>
+					</select>
+            </div>
+        </div>
+    </section>
+
+    <section id="cartSection">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2>Korpa</h2>
+                    <h4 class="text-secondary">U korpi trenutno imate <span id="kolicinaCart">0</span> proizvoda, u ukupnom iznosu od <span id="sumaCart">0</span> eura.</h4>
+                </div>
+            </div>
+            <div class="row col-sm-12" id="cart">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt forma -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Kontaktirajte nas</h2>
+                    <h3 class="section-subheading text-secondary">Biće nam zadovoljstvo da rešimo svaku Vašu dilemu.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form name="sentMessage" action="mailto:milos.marinkovickg@gmail.com" id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Vaše ime *" id="name" required data-validation-required-message="Molimo Vas unesite Vaše ime i prezime.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Vaša email adresa *" id="email" required data-validation-required-message="Molimo Vas unesite email adresu.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Vaš broj telefona *" id="phone" required data-validation-required-message="Molimo Vas unesite broj telefona.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Poruka *" id="message" required data-validation-required-message="Molimo Vas unesite sadržaj poruke."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-lg btn-primary">Pošaljite poruku</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Marko Lukovic 2017</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="https://www.facebook.com/marko.lukovic.315" target="_blank"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="https://twitter.com/?lang=sr" target="_blank"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/in/marko-lukovic-432ab7122/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modalna forma za dodavanje novog proizvoda -->
+    <div class="modal fade" id="newProduct" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Dodavanje novog proizvoda</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Naziv proizvoda</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" id="productName" type="text">
+                                <span id="productNameValidation" class="alert-danger hidden">Niste uneli naziv proizvoda</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <label class="col-sm-2 control-label">Slika proizvoda</label>
+                            <div class="col-sm-10">
+                                <div class="demo-section k-content wide">
+                                    <div class="wrapper">
+                                        <div id="selectedProductImage"></div>
+                                        <div class="dropZoneElement">
+                                            <div class="textWrapper">
+                                                <p><span>+</span>Dodaj sliku</p>
+                                                <p class="dropImageHereText">Prevucite sliku koju želite</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <input name="files" id="files" type="file" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="productCategory" class="col-sm-2 control-label">Kategorija</label>
+                            <div class="col-sm-10">
+                                <select id="productCategory" class="form-control">
+										<option value="0">Izaberite kategoriju</option>
+									</select>
+                                <span id="productCategoryValidation" class="alert-danger hidden">Izbor kategorije je obavezan.</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Cena</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" id="productPrice" type="number" min="0" value="100">
+                                <span id="productPriceValidation" class="alert-danger hidden">Nije moguce uneti negativnu cenu</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Datum unosa proizvoda</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" id="productCreationDate" type="text">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="createNewProduct()">Dodaj</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Odustani</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
