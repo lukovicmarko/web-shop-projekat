@@ -1,0 +1,254 @@
+/* Opsta podesavanja */
+body {
+	position: relative;
+    font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700
+}
+p {
+    font-size: 14px;
+}
+section {
+    padding: 100px 0
+}
+
+.text-primary {
+    color: #fed136
+}
+.text-secondary {
+    color: #777
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #fed136;
+    border-color: #fed136;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700
+}
+.k-button,.btn-default {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #fec503;
+    border-color: #f6bf01
+}
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    background-image: none
+}
+
+/*Navigacioni meni */
+.navbar-default {
+    background-color: #222;
+    border-color: transparent
+}
+.navbar-default .navbar-brand {
+    color: #fed136;
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:active,
+.navbar-default .navbar-brand.active {
+    color: #fec503
+}
+.navbar-default .navbar-collapse {
+    border-color: rgba(255, 255, 255, .02)
+}
+.navbar-default .navbar-toggle {
+    background-color: #fed136;
+    border-color: #fed136
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #fed136
+}
+.navbar-default .nav li a {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #fff
+}
+.navbar-default .nav li a:hover,
+.navbar-default .nav li a:focus {
+    color: #fed136;
+    outline: 0
+}
+.navbar-default .navbar-nav>.active>a {
+    border-radius: 0;
+    color: #fff;
+    background-color: #fed136
+}
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: #fff;
+    background-color: #fec503
+}
+
+/*Header */
+header {
+    background-image: url(../images/header-bg.jpg);
+    background-repeat: none;
+    background-attachment: scroll;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    text-align: center;
+    color: #fff
+}
+
+
+/* Akcije */
+
+.carousel-indicators {
+	width: 75px;
+	top: -45px;
+	margin-left: -30%;
+	right: -10px;
+	left: inherit;
+	bottom: auto;
+	padding: 0 0 0 0;
+	float: right;
+}
+.carousel-indicators>li {
+	border-radius: 0px;
+	border: 1px solid gray;
+}
+
+.carousel-indicators .active{
+	background-color: gray;
+}
+
+/*Katalog proizvoda*/
+.product > h4 {
+	font-size: 14px;
+}
+#shop{
+	background-color: white;
+}
+
+/* Search */
+
+#searchCategory{
+	margin-top: 20px;
+}
+
+/* Kontakt forma */
+#contact {
+    background-color: #222;
+    background-image: url(../images/contact-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#contact .section-heading {
+    color: #fff
+}
+#contact .form-group {
+    margin-bottom: 25px
+}
+#contact .form-group input,
+#contact .form-group textarea {
+    padding: 20px
+}
+#contact .form-group input.form-control {
+    height: auto
+}
+#contact .form-group textarea.form-control {
+    height: 236px
+}
+#contact .form-control:focus {
+    border-color: #fed136;
+    box-shadow: none
+}
+
+#contact .text-danger {
+    color: #e74c3c
+}
+
+
+/*Footer*/
+footer {
+    padding: 25px 0;
+    text-align: center
+}
+
+ul.social-buttons li a {
+    display: block;
+    background-color: #222;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    font-size: 20px;
+    line-height: 40px;
+    color: #fff;
+    outline: 0;
+}
+
+/*Modal - Kendo upload*/
+
+.dropZoneElement {
+	position: relative;
+	display: inline-block;
+	background-color: #f8f8f8;
+	border: 1px solid #c7c7c7;
+	width: 230px;
+	height: 110px;
+	text-align: center;
+}
+
+.textWrapper {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	font-size: 24px;
+	line-height: 1.2em;
+	font-family: Arial,Helvetica,sans-serif;
+	color: #000;
+}
+
+.dropImageHereText {
+	color: #c7c7c7;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.selectedProductImage {
+	float: left;
+	position: relative;
+	margin: 0 10px 10px 0;
+	padding: 0;
+}
+.selectedProductImage img {
+	width: 110px;
+	height: 110px;
+}
+
+.wrapper:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
