@@ -5,10 +5,10 @@ if(sessionStorage.getItem("isActiveSession") != "true"){
 }
 
 //url do funkcije web servisa koja vraca proizvode u json formatu
-productsURL = "http://services.odata.org/V3/Northwind/Northwind.svc/Products?$format=json";
+productsURL = "https://services.odata.org/V3/Northwind/Northwind.svc/Products?$format=json";
 
 //url do funkcije web servisa koja vraca kategorije u json formatu
-categoriesURL = "http://services.odata.org/V3/Northwind/Northwind.svc/Categories?$format=json";
+categoriesURL = "https://services.odata.org/V3/Northwind/Northwind.svc/Categories?$format=json";
 
 
 //suma proizvoda iz korpe
