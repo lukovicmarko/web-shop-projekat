@@ -1,5 +1,5 @@
 
-var employeesUrl = "http://services.odata.org/V3/Northwind/Northwind.svc/Employees?$format=json";
+var employeesUrl = "https://services.odata.org/V3/Northwind/Northwind.svc/Employees?$format=json";
 
 sessionStorage.setItem("isActiveSession", false);
 
